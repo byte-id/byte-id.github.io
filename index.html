@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><!--Sets language to english (easier for search engines)-->
+<head>
+    <title>Home Page</title><!--Name displayed in browser tab-->
+    <link rel="stylesheet" href="websystems.css" type="text/css"><!--Links html doc to style sheet-->
+    <link rel="icon" type="image/x-icon" href="images/id.png"><!--Icon in browser tab--><!--https://www.iconarchive.com/show/adobe-cs5-icons-by-artdesigner/indesign-icon.html-->
+    <meta charset="UTF-8"><!--Allowing more characters-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Enables resposive website that scales with viewport-->
+</head>
+<body>
+    <header><!--Semantic tag for header content, stays the same on every page-->
+        <a href="index.html" id="logo"><img src="images/id.png" alt="Round, pink logo with 'ID' linked to home page"></a><!--"Logo" for website, also home button for intuitive users-->
+        <h1>My Home Page</h1>
+        <nav><!--Semantic tag for navigation, placed inside header-->
+            <input type="checkbox" id="down" name="down" aria-label="Close and open menu/navigation with click or hover, or using tab and space" tabindex="0"><!--Enables dropdown menu to be clickable to view content, by checking and uncheking box-->
+                <label for="down">Menu &#9776;</label><!--Unicode for hamburger menu-->
+            <div id="dropdown"><!--Container for dropdown-content (list with hyperlinks)-->
+                <ul>
+                    <li><a href="index.html" class="active" aria-label="Selects after tab once menu is opened, move between 4 links with tab and select with enter">Home Page</a></li><!--Class to style active link-->
+                    <li><a href="past.html">My Past</a></li>
+                    <li><a href="future.html">My Future</a></li>
+                    <li><a href="comments.html">Comments</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="content"><!--Contains main content that varies between pages-->
+        <article class="first"><!--Semantic tag, divided into sections-->
+            <h2>Intro</h2>
+            <p>Hi! Welcome to my website! Hope you find it entertaining and are able to navigate it:) My name is Ida and I'm 20 years old. Here is a bit about me. 
+            </p>
+        </article>
+        <div class="pcon1"><!--Contains images to correlating text-->
+            <img src="images/dog.jpeg" alt="Young asian female (me) sitting outside on veranda with an English/gordon setter puppy (Poppy) in lap touching faces" class="pic" title="Poppy and me"><!--Same class for every illustrative figure, alt provided for screen readers or css turned off and title/tooltip on hover-->
+            <img src="images/me.jpg" alt="Close-up face-picture on sofa of me (wearing round glasses and a burgundy beanie) and my golden retriever (Tica)" class="pic" title="Tica and me">
+        </div>
+        <article class="second">
+            <h2>Studies</h2>
+            <p>I'm an international student at UTS. This is my first semester and I'm doing a bachelor of cybersecurity. I'm staying for my whole degree, 3 years, and hope it'll be awesome. The subjects I'm doing this semester are: Web Systems, Network Fundamentals, Introduction to Information Systems and Communication for IT Professionals.
+            </p> 
+        </article>
+        <div class="pcon2">
+            <img src="images/utscs.jpg" alt="UTS Cyber security society logo" class="pic" title="Cyber Security Society logo"><!--https://www.google.com/search?q=uts+cybersecurity+society&tbm=isch&ved=2ahUKEwiavbbbq9-BAxUL6DgGHT6CDwEQ2-cCegQIABAA&oq=uts+cybersecurity+society&gs_lcp=CgNpbWcQAzoHCAAQGBCABDoJCAAQGBCABBAKUKQDWMgLYKwOaABwAHgAgAHuAYgB2w2SAQUwLjUuNJgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=KOYeZZqJF4vQ4-EPvoS-CA&bih=563&biw=1280&rlz=1C1CHBF_noNO1035NO1035#imgrc=FMJbIufMNfGc3M&imgdii=-KzPU_MrfxC6xM-->
+            <table class="pic" aria-label="Subjects and code I'm taking this semester" title="Subjects this semester"><!--Table containing information about subjects-->
+                <tr><!--Defines new row in table-->
+                    <th>Subject name</th><!--Header information, bolded-->
+                    <th>Code</th>
+                </tr>
+                <tr>
+                    <td>Network fundamentals</td><!--Table data, same quantity as th cells-->
+                    <td>41092</td>
+                </tr>
+                <tr>
+                    <td>Web Systems</td>
+                    <td>31268</td>
+                </tr>
+                <tr>
+                    <td>Introduction to Information Systems</td>
+                    <td>31266</td>
+                </tr>
+                <tr>
+                    <td>Communications for IT Professionals</td>
+                    <td>31265</td>
+                </tr>
+            </table>
+        </div>
+        <article class="third">
+            <h2>Hobbies</h2>
+            <p>In my leisure time I enjoy reading, playing music and being social. I occasionally game a bit and like to draw. While sports are fun, I'm not doing any at the moment, but would love to do surfing, tennis or martial arts. I also enjoy card and strategy games.
+            </p>
+        </article>
+        <div class="pcon3">
+            <img src="images/drawing.jpg" alt="Drawing of water Holy Spirit bird" class="pic" title="Water Holy Spirit bird">
+            <img src="images/bridge.jpg" alt="Me and three friends playing contract bridge (card game) at table outside" class="pic" title="Playing bridge">
+        </div>
+    </div><!--Closing tag for main/content-->
+    <footer><!--Semantic tag, same content on all pages-->
+        <p class="bottom">Copyright &copy; 2023<!--Unicode for copyright--> 
+            <span class="break">University of Technology Sydney</span><!--Span tag to style separetly-->
+        </p>
+        <a href="#" class="top" title="Scroll to top">&#129137;</a><!--Link back to top of page, unicode for arrow pointing upwards-->
+    </footer>
+</body>
+</html>

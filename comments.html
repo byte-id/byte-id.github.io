@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Comments Page</title>
+    <link rel="stylesheet" href="websystems.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="images/id.png"><!--https://www.iconarchive.com/show/adobe-cs5-icons-by-artdesigner/indesign-icon.html-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Enables resposive website-->
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo"><img src="images/id.png" alt="Round, pink logo with 'ID' linked to home page"></a>
+        <h1>Comments Page</h1>
+        <nav>
+            <input type="checkbox" id="down" name="down" aria-label="Close and open menu/navigation with click or hover, or using tab and space" tabindex="0">
+                <label for="down">Menu &#9776;</label>
+            <div id="dropdown">
+                <ul>
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="past.html">My Past</a></li>
+                    <li><a href="future.html">My Future</a></li>
+                    <li><a href="comments.html" class="active">Comments</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="comments">   
+        <article>
+            <h2>Overall</h2>
+            <ul>
+                <li>I initially faced a slow start with design decisions for layout and look, partly due to the openness of the assignment. I altered it several times to accommodate the content while maintaining a grid-based structure and ensuring responsiveness.</li>
+                <li>While I have some experience with designing more complex websites using databases and JavaScript, I chose to forgo it in favour of refining my CSS skills and work around accessibility. </li>
+                <li>I encountered some challenges, such as maintaining image overlap while keeping responsiveness and getting the desired display of the menu. Some issues could've been easier solved with events in javascript. Additionally, determining optimal picture ratios, sizes, and layout posed its own set of challenges. I could have approached the design with a focus on a fixed screen size, or max or min. Instead, I ended up somewhere in between. While not optimal, it suited the project's purpose as it allowed me to avoid altering some default values for elements multiple times.</li>
+                <li>Throughout the design process, I adapted a logical layout with attention to responsive design principles, and am quite pleased with how it turned out.</li>
+            </ul>
+        </article>
+        <article id="tech">
+            <h2>Technical</h2>
+            <section>
+                <div class="text">
+                    <h3>Structure</h3>
+                    <ul>
+                        <li>Designed according to the requirements outlined in the assignment on <a href="https://canvas.uts.edu.au/courses/28398/pages/webass-specification?module_item_id=1404383" target="_blank" title="Link to canvas webassignment specifications">Canvas</a>.</li>
+                        <li>Four html documents, one cascading style sheet and numerous images allocated in the websystems directory. The images are located in a separate subdirectory for a clearer structure. 
+                        <li>Takes you to index page when accessed through the link provided.</li>                    
+                        <li>The website is structured like the illustration below with 4 main sections with different purposes.</li>
+                    </ul>
+                </div>
+                <img src="images/structure.png" class="img" alt="Structure of main elements on webpage - header with nested nav/menu to the right, content and footer">          
+            </section>
+            <section> 
+                <div class="text"> 
+                    <h3>Header</h3>
+                    <ul>
+                        <li>The header contains a logo, the title of the page and a nested navigation menu with hyperlinks.</li>
+                        <li>The header is a flexbox with 3 children. The menu label is positioned to the far right by setting <span>nav margin-left: auto</span>. The logo image has a hyperlink that takes you to the home page.</li>
+                    </ul>
+                </div>
+                <img class="img" src="images/header.png" alt="Header structure with nested navigation, inline flex #logo, h1, #dropdown and #down">
+            </section>    
+            <section>
+                <div class="text">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li>I chose a dropdown menu that by default displays as a block. To maximise space and create a horizontal option when the screen size warrants it, I made the <span>nav</span> a flex container with features <span>row-reverse</span> and <span>position: relative</span>. Additionally, I set <span>ul</span> to flex and <span>li</span> to <span>display: inline</span>, within a <span>@media query</span>. For mobile and small screens, the <span>nav</span> width is set to 100%, ensuring it occupies the entire width of the screen.</li>
+                        <li>The menu is hoverable, but can also be checked/unchecked. This is achieved through <span>input type="checkbox"</span>. Manipulation of the style makes the label clickable without the checkbox being visible. It's set to <span>opacity: 0</span> rather than <span>display: none</span> to allow it to be selected by pressing tab.</li>
+                    </ul>
+                </div>
+                <div class="img">
+                    <img src="images/menumob.png" alt="Mobile view menu, block, centralized text and gradient as backgroundcolor"> 
+                    <img src="images/menutabmin.png" alt="Tablet view dropdown menu block, blue links with white, rounded border"> 
+                    <img src="images/menufull.png" alt="Laptop/monitor view dropdown menu inline, transparent background">
+                </div>
+            </section>
+            <section>
+                <div class="text">
+                    <h3>Main</h3>
+                    <ul>
+                        <li>The layout the pages are identical, except for the comment page, which was altered to communicate the information more effectivly in a flexbox column, with images center aligned.</li> 
+                        <li>The container of the main content is a <span>div</span> with the class <span>.content</span>. It houses six child items: three <span>articles</span> and three <span>divs</span>. The layout is structured using a grid with two columns and three rows with slight verical gaps between, visually represented by violet and purple dashed lines. Each <span>article</span>, labelled with classes <span>first, second and third</span> has <span>flex-direction: column</span>, creating a content flip effect. Additionally, they are centrally aligned along the y-axis for a balanced appearance. Images within these sections are centered, both vertically and horizontally and utilises z-index to decide stacking order.</li>
+                        <li>The article consists of a <span>heading</span> and a <span>paragraph</span> while the <span>div</span> with the class <span>.pcon(1/2/3)</span> has two illustrative items. These are nested to get the desired layout using grid and flexbox. By using grid, it's easier to add elements seamlessly while catering to a responsive design.</li>
+                        <li>For smaller screens, the <span>.content</span> is a flexbox with <span>flex-direction: column</span>. Responsive changes are set with <span>meta viewport</span> through <span>@media queries</span> and relative size values.</li>
+                    </ul>
+                </div>
+                <div class="img">
+                    <img src="images/grid.png" alt="Sectionated main content grid, 2x3 with a slight gap between rows, article with classes and picture containers">
+                    <img src="images/flex.png" alt="Sectionated content of a grid row, article with texr, picture container with illustrations/pictures">
+                    <img src="images/contentmobile.png" alt="Screenshot mobile layout with flex-direction column">
+                </div>       
+            </section>
+            <section>               
+                <div class="text">
+                    <h4>Illustrations</h4>
+                    <ul>
+                        <li>The images/illustrations in these sections are positioned at the center and overlap slightly when rotated. Rotation is implemented with <span>transform: rotate(xdeg)</span>, and <span>nth:child(even/odd)</span> selector is utilised for a symmetrical presentation. On hover, they smoothly zoom in using a <span>transform: scale</span> property and transition. Their responsiveness is achieved through the use of relative values for <span>max-width and min-width: 0</span> for the items and the container.</li>
+                        <li>Tables here serve the same purpose as images and are mostly decorative to underline content. The background is achieved through using a <span>nth-child(even/odd)</span> with <span>background-image: linear-gradient</span>. The rounded border and having selective, minimalistic borders is enabled by <span>border-spacing: 0</span>.</li>
+                        <li>The pictures have been resized to fit an aspect ratio of 4:5 for portrait and 4:3 for landscape with a height of 400px. This makes it look more seamless when putting them beside each other.</li>     
+                    </ul>
+                </div>
+                <img src="images/zoompic.png" class="img" alt="Screenshot illustrating zoom effect on pictures">
+            </section>    
+            <section>
+                <div class="text">
+                    <h3>Footer</h3>
+                    <ul>
+                        <li>The footer is a grid. It contains a <span>paragraph</span> with a nested <span>span</span> and a link to the top of the page which is only visible on smaller screens. The grid allows positioning of the link through <span>place-self: end and display: inline</span>, and is styled to look like a button. The span <span>.break</span> allows the <span>paragraph</span> to break.</li>
+                    </ul>
+                </div>
+                <img src="images/footer.png" class="img" alt="Screenshot of footer showing green scroll to top link/button">
+            </section>
+            <section>
+                <div class="text">
+                    <h3>Selectors and styling</h3>
+                    <p>I've chosen to utilize tags with child selectors and groupings more than classes and id's since I find it more effective.                     
+                        Read more on <a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank">W3schools</a>.
+                        I've added some comments in the html (content in css is somewhat chronological) for further inspection. <span>@media queries</span> are positioned at the bottom.
+                    </p>
+                </div>
+                <table class="img" aria-label="Table with css selectors and examples">
+                    <tr>
+                        <th>Selectors</th>
+                        <th>Elements and examples</th>
+                    </tr>
+                    <tr>
+                        <td>Classes</td>
+                        <td>Active, content, pcon1, pcon2, pcon3, pic, first, second, third, top</td>
+                    </tr>
+                    <tr>
+                        <td>ID's</td>
+                        <td>Logo, dropdown</td>
+                    </tr>
+                    <tr>
+                        <td>Attribute</td>
+                        <td>[attribute^=value] [attribute=value]</td>
+                    </tr>
+                    <tr>
+                        <td>Pseudo classes</td>
+                        <td>:hover
+                            :checked</td>
+                    </tr>
+                    <tr>
+                        <td>Parents & siblings</td>
+                        <td>element element
+                            element,element
+                            element~element
+                            element>element</td>
+                    </tr>
+                    <tr>
+                        <td>Children</td>
+                        <td>:nth-child(even/odd)
+                            :nth-child(even)
+                            :first-child
+                            :first-of-type</td>
+                    </tr>
+                    <tr>
+                        <td>HTML tags</td>
+                        <td>Body, h2, p, header, footer, li, label, nav, article, table, th, html, span, ul, li</td>
+                    </tr>
+                </table>
+                </section>
+        </article>
+        <article id="ae">
+            <h2>Aesthetics</h2>
+            <p>My design philosophy revolves around minimalism, creating an inviting and classy appearance. It combines clean lines, rounded edges, light colours, and spacious sections with a structured layout. Simplicity, with limited elements and effects ensures clear and concise content presentation, prioritising readability and user-friendliness.</p>
+            <section>
+                <div class="text">
+                    <h3>Colour & font</h3>
+                    <ul>
+                        <li>The harmonious blend of pastel colours adds a touch of elegance, and also aligns well with the vibrant and inviting feel I wanted to convey.</li>
+                        <li>A consistent colour palette that contrasts the text, contributes to a holistic and aesthetically pleasing design.</li>
+                        <li>Borders and shadows strategically emphasise content without overwhelming the design.</li>
+                        <li>Background colours are strategically applied to text elements to enhance readability and contribute to the design's cohesion.</li>
+                        <li>Depending on the context, different fonts may accentuate specific elements (comment page).</li>
+                    </ul>
+                </div>
+                <img src="images/colour.png" class="img" alt="Pastel palette used for webpage in hex: e0fff, 7cffcb, ffdab9, ffd3e8, 84d9ff">
+            </section>
+            <h3>Illustrations & interactivity</h3>
+                <ul>
+                    <li>Tables are used as illustrations on multiple pages, but serves the same purposes as images.</li>
+                    <li>Images are designed with a white, rounded border for cleaner aesthetics and have interactive zoom effect on hover with a transition for smoother action. They are also tilted and overlap slightly to create a more modern design. Images are sized down to prevent covering the page when CSS is turned off, although resolution may be affected. It also reduces file size and time loading the page.</li>
+                    <li>Menu highlights links and label on hover and includes active class for better site navigation, with a dropdown functionality that stays open when checked (clicked).</li>
+                    <li>Hover effects are disabled for smaller screens to accommodate touch interactions.</li>
+                </ul>
+            <h3>Structure</h3>    
+                <ul>
+                    <li>Whitespace and margins provide a clean and spacious layout while maintaining content centrality.</li>
+                    <li>The design is responsive, adapting seamlessly to various screens and devices, ensuring a consistent and user-friendly experience.</li>
+                    <li>Clear hierarchy aids user navigation, featuring a prominent page title, appropriate headings, a minimalistic header, footer, and menu. The overall design maintains a structured layout with clear divisions and consistent spacing, which enhances visual appeal and usability.</li>
+                    <li>Grid layout with an equal number elements allows easy incorporation of new content. Content is center aligned vertically and horizontally</li>
+                </ul>
+        </article>
+        <article>
+            <h2>Accessibility</h2>
+            <p>The design strives to be as accessible as possible, catering to visually impaired or blind users who rely on screen readers, as well as individuals with colour blindness. Several features have been incorporated to achieve this:
+            </p>
+            <h3>Screen readers</h3>
+                <ul>
+                    <li>The use of semantic HTML tags enhances the structure and meaning of content.</li>
+                    <li>The attribute aria-label and descriptive alt text have been applied to images for improved screen reader comprehension.</li>
+                    <li>Site navigation is enabled for keyboard users through tabindex and a checkable menu</li>
+                    <li>Content is arranged in the HTML to maintain a chronological order, ensuring that illustrations follow corresponding text in a logical sequence.</li>
+                </ul>
+            <h3>Structure</h3>
+                <ul>
+                    <li>Headings are prominently displayed and logically structured to aid navigation.</li>
+                    <li>The menu highlights the current and hover states in addition to text for easier identification and navigation.</li>
+                </ul>
+            <h3>Font & color</h3>
+                <ul>
+                    <li>Line and font spacing (typography) is increased to enhance readability.</li>
+                    <li>Relative text sizes are employed, ensuring compatibility with zoom functionality, and a sans-serif font type enhances readability.</li>
+                    <li>Text/background colours have been chosen to provide sufficient contrast with each other to prevent eye strain.</li>
+                    <li>Clear lines and well-defined edges, along with appropriate spacing between content elements, contribute to a user-friendly experience.</li>
+                    <li>Guidelines to accessibility can be found at
+                    <a href="https://www.w3.org/WAI/fundamentals/accessibility-principles/" target="_blank">w3</a> and <a href="http://webaim.org/intro/" target="_blank">webaim</a>. 
+                    </li>
+                </ul> 
+        </article>
+    </main>
+        
+    <footer>
+        <p class="bottom">Copyright &copy; 2023
+            <span class="break">University of Technology Sydney</span>
+        </p>            
+        <a href="#" class="top" title="Scroll to top">&#129137;</a>
+    </footer>
+
+
+</body>
+</html>
