@@ -1,0 +1,28 @@
+            Show verifiers
+            - Input guess
+            - Input verifiers
+Show play history
+- Choose solve or continue
+Loop^^
+- Input solution
+Right or wrong, number of rounds
+
+use sys.argv[1] to get files
+
+listCriteria()
+int(input())
+input(comma separated list)
+turnHistory()
+input(ready to solve y/n)
+    if y 
+    input(solution)
+        if guess = sys.argv[2]
+            Right
+            number of guesses
+    if n
+    loop back up
+
+
+# sys.argv[2] - answer 341
+# sys.argv[0] - player.py
+# sys.argv[1] - command line argument, listing files used

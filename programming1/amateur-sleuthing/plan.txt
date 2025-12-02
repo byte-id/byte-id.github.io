@@ -1,0 +1,84 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sleuth
+3 cards
+Shape, colour, number
+
+3 menus
+Ask question
+Guess card
+
+4 shapes
+4 colours
+4 numbers
+64 combinations
+Can combine properties
+
+Keep track of guesses and questions asked
+
+Numeric input
+How many cards with that option
+
+
+If chosen 1
+Ask questions
+- For question chosen show options based on quest
+Match - if colour or shape
+- For option chosen show result/answer
+-- Has x card w property y (based on input from prompt)
+
+- Increase question count
+
+If chosen 2
+Select colour, shape, number
+- Return result/answer
+
+-If right
+-- Return string output w card
+---If guessed before (in correct array) return string
+---If not return other string
+-- Store in corrcect array
+
+- If wrong
+-- Return string output w card
+--Increase incorrect guess count
+
+
+Once all 3 cards are correct
+- Return string answer/result
+-- Incorrect guesses, number of questions, cards in order they were guessed
+
+
+Functions 
+
+Play
+Player (choose cards) - already made
+Menus
+- 
+Guesscard
+
+Use from cap
+- Enum colour, shape
+- Player??
+- Card class
+    how_many_colour
+    how_many_shape
+    how_many_number
+    how_many_colour_number
+    how_many_shape_number
+    how_many_colour_shape
+    has_card
+
+
+
