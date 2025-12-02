@@ -1,10 +1,4 @@
 /* (Database Fundamentals, Assignment Part D, Spring  2024 */
-/* First author's name: Ida Malene Andersen*/
-/* First author's email: ida.m.andersen@student.uts.edu.au*/
-/* Second author's name: Kemiel Dewnath*/
-/* Second author's email: Kemiel.Dewnath@student.uts.edu.au*/
-/* Third author's name: Flynn Lloyd Townsend*/
-/* Third author's email: flynn.l.townsend@student.uts.edu.au*/
 /* script name: App.SQL */
 /* purpose: Builds PostgreSQL tables for App database. The purpose is to store and manage information related to mobile applications, users, and app reviews to be able to track app information, manage user data and collect and review reviews.*/
 /* date: 27 October 2024 */
@@ -111,4 +105,3 @@ SELECT AppName, AppPrice
 from App
 where AppPrice > (select avg(AppPrice)
                     from App);
-
