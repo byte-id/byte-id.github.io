@@ -1,4 +1,4 @@
-# Uni
+# University
 School programming projects
 * Data structures and algorithms | 2025
 * Programming 1 | 2024
